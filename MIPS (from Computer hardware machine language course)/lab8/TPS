@@ -1,0 +1,19 @@
+Alberc Ej Salcedo
+CSE031
+Lab08
+
+other questions are asked may be in the labs themselves
+
+--TPS 1--
+1 - 4 are not questions just, just talking about fib.s
+
+5) load word and store word will only overwrite the user input if we leave in the code. We are reading values in from the user so it is not necessary to use .data segment for n.
+
+--TPS 2--
+1) if 5 is entered the output will be 29
+4) in the lab
+5) The return value should be stored in $v0 but that block is already ocupied so we need to store $v0 at an other address
+7) 4 register values are reserved in the storage. The ifrst thing to be stored in stack is the return address.
+10) $a0 must be stored in the stack becuase there are multiple input arguments that need to be stored.
+12) the result of this will cause the result of recursion(m - 2) = $a0
+15) The return address needs to be retrived so the the compiler know where to return TO.

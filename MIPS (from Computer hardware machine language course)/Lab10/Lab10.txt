@@ -1,0 +1,55 @@
+Alberc Ej Salcedo
+Lab10
+
+Partners: Elyse 
+
+--TPS 1--
+1) A cache is a copy of a subset of main memory which uses static RAM (SRAM). We need this becuase cache is fast, the typical access time for cache is usually .5 - 2.5 ns.
+This is much faster than regular memory which uses dyncamic RAM (DRAM). It gives access to the memory faster but is low in capacity. It
+is also very expensive to have large capacity cache.
+
+4) We need 4 bits for an offset. Bloack size function is: f(n) = log2(n) where n is block size. It is not practical to have
+a block size of 1 byte because that is far too small.
+
+5) We would need 6 bits for the index. The function for number of bits in index is: log2(n), where n = blocks in cache.
+
+6) We can find the total size of the cache by multiplying the # of blocks(16) and the block size(64): 16 * 64 = total size of cache.
+
+7) We use the remaining bits to calculate the tag. This is important because the tag bits is used to check if it has the correct block in
+memory.
+
+8) Legend: 20 bits, 128B of cache 8B block size
+	a) 2^20 -> 1,048,576 -> 1MB. This is the max capacity.
+	b) 3 bits
+	c) 128/8 = 16 blocks.
+	d) 4 bits
+	e) 20 - 7 = 13 bits
+	f)	[Tag(13)]	[Valid(1)]	[Dirty(10)]		[Blocksize in bits(64)]
+	g) 79 bits
+
+--TPS 2--
+1) disadvatage of direct-mapped cache - Since multiple memory addresses map to same cache 
+index so we cannot be sure if it is the right one. Conflict miss.
+
+3) log2(256) = 8 bits
+	256 sets in each cache = 1024 of blocks/ 4 associativity
+4)
+	a) 2^20 = 1MB
+	b) log2(8) = 3bits
+	c) 128/8 = 16 blocks
+	d) 8 sets
+	e) log2(8)
+	f) 14 tag bits
+	g)	[Tag bits(14)]	[Valid bits(1)]		[Dirty bits(1)]		[Blocksize(64 bits)]
+	h) 64 + 1 + 1 +14 = 80 bits.
+	
+--Individual assignment--
+**Remoted into my desktop that is at home**
+Ryzen7 CPU
+
+1 & 2 & 3)it has L1-D, L1-I, L2, L3 cache: in total there are 3 levels. and L1 is split, D-cache is
+32KB(8 ways 64 byte line size) and I-cache is 64kb(4-way, 64 byte line size)
+4) they are arll associative
+5)offset: log2(8) = 6 and the tag bits
+	tagbits: 40 - 12 =28
+	(used Elyse's laptop for offset)

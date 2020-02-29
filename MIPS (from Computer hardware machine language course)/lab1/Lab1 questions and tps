@@ -1,0 +1,66 @@
+Alberc Ej Salcedo
+CSE31
+9/5/2019
+
+-TPS Activity 1-
+
+1)Partners
+Shivneel Chand
+Elyse Geimer
+
+2)
+- https://www.pcsteps.com/5010-basic-linux-commands-terminal/
+- https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/
+- http://linuxcommand.org/
+
+3)Shiv said linux shell commands
+Elyse searched up how to set it up on a mac.
+
+-TPS Activity 2-
+
+1) The Xfce terminal is in the menu bar. I can either search t up or use a bind key I have set up for it.
+	a) Yes I can open more than one termnal and even use different terminals depending what I am doing. I tend to use URXVT terminal for text editing and xfce terminal for everything else.
+	b) It depends what I am doing. For instance vim works alot better on URXVT-terminal on my linux machine so I will use that. If I want to do anything else like navigate or use terminal programs I'll use XFCE default terminal.
+2)ls
+3)~/Desktop
+4)mkdir CSE31
+6)mkdir Lab_1
+
+-TPS Activity 3-
+1) - https://gcc.gnu.org/
+   - https://www.geeksforgeeks.org/gcc-command-in-linux-with-examples/
+3) gcc -o [name] [filename]
+4) If it compiles it wont throw you any errors. It should show you nothing.
+5) -c compiles and assemble, but do not link.
+6) -g is a parameter that automatically get passed on to different various sub-processes invoked by gcc. This is used to Degbug
+7)how I change the file name is i use nano to write out as a different name.
+8)gcc cc compiles without a name and executes it using ./a.out. Compiling this way will allow you to overwrite the previous compiled file.
+9)./a.out
+
+
+Pseudocode
+
+	int posnumbers
+	int negnumbers
+	int num
+	int plusCounter
+	int negCounter
+
+do{
+	print "Please enter an integer"
+	scan number
+	
+		if number is positive
+			posnumbers += num
+			plusCounter++
+		else if negative
+			negnumbers += neg
+			negCounter++
+		else
+			if plusCounter does not = 0
+				print positive average
+			if negCunter does not = 0
+				print negative average
+			endif
+		endif
+}while(num is not = 0)

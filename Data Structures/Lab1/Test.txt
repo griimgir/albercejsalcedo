@@ -1,0 +1,42 @@
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import javax.swing.JComponent;
+
+/*  java
+public static TemperatureGage{
+classsubset--='(){
+killbot-- switch;
+LinkL --+ resistor 10J || inLink ++- retina 700W {40500GW{100100100GW}};
+}
+}
+*/
+
+/*  python
+
+class A = -++ TemperatureGage[
+T = ++-
+sT = --+
+]
+
+run();
+bash(TemperatureGage);
+tweak(catchE());
+switch() --> 1 \\ 0;
+
+{LinkL(T):
+10J;
+}
+{inLink(sT):
+rangY(40500GW, 100100100GW);
+}
+
+*/ 
+
+public class DesignedFrame extends JComponent {
+   public void paintComponent(Graphics g) {
+      // Cast to Graphics2D
+      Graphics2D graphicsObj = (Graphics2D)g;
+
+      // Write your drawing instructions
+   }
+}

@@ -1,0 +1,5 @@
+Compare the values of N for which each demonstration (arrays vs binary trees) starts to perform unacceptably
+slow. That is, if it takes more than a minute to complete one either of the tasks.
+
+
+It becomes insanley slow when N = 10000000, taking 16797ms

@@ -1,0 +1,35 @@
+Alberc Ej Salcedo
+Partners: Elyse and Arnau
+
+--TPS1--
+1)Text Segment: 0x00400000
+  Data Segment: 0x10010000
+
+2) From the look of it source is much easier in readability and basic is a less readable since
+it shows actual binary.
+
+3) the difference between each address are 32 bytes
+
+4) there ae 8 columns, because 32/4 is 8
+
+5) each 4 byte the addresses travers through a column is created.
+
+6) m:	.word 20
+
+7) The address of m is in 0x00000014
+
+8)		li $v0, 4
+		la $a0, str1
+		syscall
+
+9)	str1 is stored in 0x6f6c2049 & 0x43206576 & 0x31334553 & 0x00000021
+
+10) It does, it stores all the characters in str1 byte by byte starting from right to left within each 4 bytes
+
+11) li $a0, str1
+	syscall
+
+12) We are loading n -> t3 to be executed as 0x10010000
+
+--TPS 2--
+1) slt, beq, and bne

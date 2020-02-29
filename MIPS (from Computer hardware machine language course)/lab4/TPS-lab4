@@ -1,0 +1,30 @@
+Alberc Ej Salcedo
+partners: Elyse Geimer & Arnau
+
+--TPS 1--
+1) Epected print will be 2
+2) Considering its a type cast of Char I believe that it will print 'A'
+3) It wasn't 'A' instead int printed out 41414141.
+4) It prints a 2 and we were surprised because we thought it would be the same but it is different.
+5)
+    a) there is one array of size 4
+    b) & c) four_c = (char*)four_ints yes it it is. They will increment the same path as each other since they start at the same place.
+6) We incremenent by the size 4 bytes. We discussed that the differenc in addresses starting from
+    30 to 34 to 38 to 3c.
+7) picture attached
+8) the incrementation is different as one bit is not the same as the incrementation for four_ints
+    this is because they are different in data types.
+9) picture attached.
+10) It's simple, the data type is what dictates how it will increment. Data types have different size in RAM. Integers are 4 bytes while char are only 1 byte.
+
+--TPS 2--
+1) the 8th line allocates memory to the heap for two things, an array and a int pointer.
+2) to access the array we can use a pointer caled *arr and increment it by +i. ex. *(arr+i).
+3)
+for(int i = 0; i < n; i++){
+    *(arr + i) = (int*) malloc(n * sizeof(int*));
+    for(int j = 0; j < n; j++){
+        *(*(arr + i) + j) = 0;
+    }
+}
+4) You have to pass the size, the function accepts a parameter of the matrix's size.

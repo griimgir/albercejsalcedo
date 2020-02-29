@@ -1,0 +1,22 @@
+-- TPS 1 --
+1) Stack, heap, and static. Stack stores variable declerations with variable name, the address of the variable, and the stored data of data type.
+heap stores space requested for pointers via malloc(). Finally static stores variables outside of main function and can be used in other
+struct functions.
+
+2)  a) 4 varibales are declared. 
+    b) one int, one float, 1 pointer, and one next pointer.
+    c) stack and heap
+    d) heap, it is requesting space of type sizeof(int). Integers are 4 bytes.
+3 & 4) Picture uploaded
+5)Yes the TA accepted it
+
+-- TPS 2 --
+3) these [ointers are not stored contigiously, instead they hop around the memory pointing to the next address with the stored data type.
+Head is the current node which has a next pointer that points to the next head.
+
+-- Assignment 1 --
+1) you need to pass the array because the algorithm needs to make a copy, and with that copy it will sort it and then replace the old array with the new sorted array.
+
+2)No, the original array is only copied, and will later be replaced with the new sorted array.
+
+3) So you can maniplulate one without changing the original, this will make it possible to print the original array and the new sorted array.

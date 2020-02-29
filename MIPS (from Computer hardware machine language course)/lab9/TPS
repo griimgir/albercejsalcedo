@@ -1,0 +1,22 @@
+Alberc Ej Salcedo
+Group members: Elyse and Arnau
+Lab10
+
+--TPS 1--
+1) a cache is a copy of a subset of main memory. It uses static RAM and will store data in it as long as it is still powered on. It's the fastest way to access memory, instead of memory in the hardrive.
+
+4) We need 4 bits for 16B --> f(n) = log2(n). In this case the block size is 16gb. It isn't practical because everytime we access memory we need to retrieve more than 1 byte.
+
+5) We need 6 bits. using the same function f(n) = log2(n). Of 64 blocks, we need 6 bits.
+
+6) Yes we can find the block size by multiplying 16 x 64, this will give us the size.
+
+7) The left over bits will be the tag. This is important because this is it checks if this has the correct block.
+
+8)
+a) main memory size is = 2^20 bits = 1mb
+b) bits = log2(8B) = 3 bits
+c) There are 128Blocks / 8 Block size = 16 blocks in the cache
+d) 4
+e) 20 - 4 = 13 
+f) 

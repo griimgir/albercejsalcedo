@@ -1,0 +1,44 @@
+Alberc Ej Salcedo
+lab2
+
+--TPS 1--
+1) Elyse Geimer & Arnau Torras
+2) https://www.ibm.com/developerworks/library/l-gdb/index.html
+	https://www.tutorialspoint.com/unix_commands/gdb.htm
+	https://web.eecs.umich.edu/~sugih/pointers/summary.html
+
+--TPS 2--
+1)two ways you can do this. gcc -g or making break points in your code using (gdp)
+2) gcc -g punishment.c
+3)gdb a.out
+4)break points are where you break a specific line. This is where you want to run until this line to be debugged.
+5)we can put a break point before the for loop and end it at the end of the for loop.
+8)you can exit any terminal programs using ctrl + z
+
+--TPS 3--
+1) 2 variables were declared and 2 pointers were declared
+2) They should be totally random because they have not been declared as anything. For me they all came out as 0 although that is pureley coincident. Although runnung arr[] i got random numbers i never initialized to those memory spaces.
+3) Easy,simply initialize every variable decleration to their respected data type. In this case I would initialize everything to 0.
+4) (Refer to pointers.c)
+ 
+    px = &x;
+    py = &y;
+6)
+    for(int i = 0; i < 10; i++){
+        arr[i] = i + 1;
+}
+7) They are exactly the same thing. Arr* and Arr[] can be used interchangably. Both Arr points to an array.
+    px = arr;
+8) yes all it does all it does is print out the address that the pointer is stored in.
+
+--Segmentation Faults--
+1) line 15 was the cause. We are saving to an interger in a variable which doesn't make sense. You need to save it at the address of that integer variable that points to that memory space.
+2) input should changed to &input because now it it actually going to the address of that memory space you want to change.
+3)the bug here is that it is always going to yield 0 because sum in main keeps being turned to 0.
+4) The solution is to solve the average in the read_values() function and instead return the value of the average.
+
+
+--Assignment 2 questions--
+1) Hello! hello!
+2) line 16::     s1[k+s1len] = NULL;
+3) The program can't run because the program can only store up to 10 char data type.

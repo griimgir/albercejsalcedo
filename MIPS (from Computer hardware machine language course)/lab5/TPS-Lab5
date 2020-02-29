@@ -1,0 +1,22 @@
+--TPS 1--
+4)
+    a) open the .s file and run
+    b) you can press run button or press your F3 button
+    c) press the green button or you can use the button next to it to run step by step
+    d) no, you have to assemble it before running it. This is similar to compiling then running.
+    e) you can just press the green button with a one on it
+    f) the rewind button
+
+--TPS 2--
+1)  .word is the size of your pointer to you data.
+    .data data that is stored in memory
+    .test is where instructions are stored
+2)  beq is there so this line copares two values t see if they are equal
+3)  j jumps to fib function which starts at line 10
+4)  you assemble it and then check line 15 for a breakpoint then run. 
+5)  then just run one by one as you would normally proceed. To continue and run your code you 
+    can remove the breakpoint by assembling it again.
+6)  you would have to change the values after you slowed down how fast it runs each line
+    there is a slider which allows you to change the speed that it runs the code.
+7)  n is stored in $t3 the 13th fibbinochi
+8)  syscall is a function for input and output

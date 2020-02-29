@@ -1,0 +1,123 @@
+Alberc Ej Salcedo
+CSE031
+Lab09
+
+TPS Activity 1
+
+4) There are 32 bits
+
+5) There 3 type of formats are R, I, and J. R:add and jr. I: add and beq. J: j and jal,
+
+6)
+a) addi is in I format and has 4 fields. Names are opcode|rs|rt|immidiate
+b) opcode in hex is 0x8, $zero is the rs register aswell as in hex, zero is represented as 0x00. $s0 is the rt register and in hex, $s0 is represented as 16 = 0x10. thus the value of immediate would be 25. In hex, 25 would be in 0x0019
+c) 
+Hex: 0x20100019 
+Binary: 0010 0000 0001 0000 0000 0000 0001 1001 
+
+7)
+a) Binary: 0000 0010 0011 0000 0100 0000 0010 1010
+Machine Code,: 0x0230402A
+b) R-format because the first 6 bits, which is the opcode. 6 fields - opcode|rs|rt|rd|shamt|funct
+c) opcode - 0x0
+rt: 0x10
+rd: 0x08
+shamt: 0x0
+funct: 0x2a
+d) instructions is - slt. The way we determine this is you combine the opcode and the funct. Mapping - opcode|rs|rt|rd|shamt|funct
+
+8)
+a)I-format
+b)opcode: 0x05, rs: 0x08, rt: 0x00
+c) LESS - Address: 0x0040001c
+d) no because bne is in the I-format and the adress has 32 bits which cannot be in the machine code, there is no room,
+e) immidiate field is the number of lines from the next line. The value will be 1.
+f)
+Binary: 0001 0101 0000 0000 0000 0000 0000 0001
+Hex: 0x15000001 
+it matches the code in the text segment.
+
+9)
+a) for j formats there are two fields
+b) The opcode for j will be 0x2
+c) it will go to label GREQ at address 0x00400030.
+d) We can fit 26 bits. This is done by removing the first 4 bits and last 2 bits of the address in binary. 0000 0100 0000 0000 0011 00
+e)
+binary: 0000 1000 0001 0000 0000 0000 0000 1100
+hex: 0x0810000C 
+and yes its the same code in the text segment
+
+TPS Activity #2
+1)
+addi $s0, $zero, -15 (I-format)
+opcode: addi = 0x8 = 001000
+rs: $zero = 0x0 = 00000
+rt: $s0 = 16 = 10000
+immediate: -15 = 0000 0000 0000 1111 -> 2’s compliment = 1111 1111 1111 0001 
+In binary: 0010 0000 0001 0000 1111 1111 1111 0001 
+In machine code: 0x2010FFF1
+
+Starting from: 0x2008FFF1
+Convert to binary: 0010 0000 0001 0000 1111 1111 1111 0001
+Check first 6 bits: 001000 = addi, therefore we know it’s in I-format
+Rs: 00000 = $zero
+Rt: 10000 = $s0
+Immediate: 1111 1111 1111 0001 -> 2’s compliment = 0000 0000 0000 1111 = -15
+so it mean that it is - addi $s0, $zero, -15
+
+2)
+slt $t0, $s0, $s1 (R-format)
+opcode: slt = 0x0 = 000000
+rs: $s0 = 16 = 10000
+rt: $s1 = 17 = 10001
+rd: $t0 = 8 = 01000
+shamt: 0x0 = 00000
+funct: 0x2a = 101010
+In binary: 0000 0010 0001 0001 0100 0000 0010 1010
+In machine code: 0x0211402A
+
+Starting at: 0x0211402A
+Convert to binary: 0000 0010 0001 0001 0100 0000 0010 1010
+cherck the first 6 bits: 000000, Since they equal 0, check last 6 bits = 101010 = slt, therefore R-format
+Rs: 10000 = 16 = $s0
+Rt: 10001 = 17 = $s1
+Rd: 01000 = 8 = $t0
+Shamt: 00000 = 0
+so it mean that it is - slt $t0, $s0, $s1
+
+3)
+beq $t0, $zero, LEEQ (I-format)
+opcode: beq = 0x4 = 000100
+rs: $t0 = 8 = 01000
+rt: $zero = 0x0 = 00000 
+immediate: LEEQ = 6 
+6 = 0000 0000 0000 0110
+we do not perform 2’s compliment on negative binaries.
+In binary: 0001 0001 0000 0000 0000 0000 0000 0110
+In hex machine code: 0x11000006
+
+Starting at 0x11000006
+Convert to binary: 0001 0001 0000 0000 0000 0000 0000 0110
+Check first 6 bits: 000100 = 0x4 = beq, therefore I-format
+Rs: 01000 = 8 = $t0
+Rt: 00000 = $zero
+ the immediate 0000 0000 0000 0110 = 6
+so that means it is beq $t0, $zero, LEEQ
+
+4)
+j GRT (J-format)
+opcode: j = 0x2 = 000010
+address: GRT = 0x0040001C = 0000 0000 0100 0000 0000 0000 0001 1100
+Remove the 4 left and 2 right bits of the address: 
+0000 0100 0000 0000 0000 0001 11
+In binary: 0000 1000 0001 0000 0000 0000 0000 0111
+In hex machine code: 0x08100007
+
+Starting from: 0x08100007
+Convert to binary: 0000 1000 0001 0000 0000 0000 0000 0111
+Check first 6 bits: 000010 = 0x2 = j, so that J-format
+Address: 00 0001 0000 0000 0000 0000 0111
+Add 4 bits to the left and 2 to the right of the address:
+0000 0000 0100 0000 0000 0000 0001 1100
+Convert address into Hex: 0x0040001C
+so it means that it is -  j 0x0040001C

@@ -1,0 +1,36 @@
+Alberc Ej Salcedo
+Lab partners: Arnau & Elyse
+
+--TPS 1--
+1) 
+procedures - does not return a value, it is a task
+function - returns one or more values and provide explanations on arguements
+method - is a function that executes an object
+
+4) line 20. a0 -> a1 -> v0
+the sum of a0 and a1 is stored into v0
+
+5)
+we can use the j command as long as we instruct it where to go.
+
+6) it is saved to $ra (line 11). In this case 0 is being saved which doesnt make sense bnecause we need the address to return to 13.
+
+7) It gets terminated after it runs through SUM
+
+8) it needs to return to 0x00400028
+
+9) no becuase of the infinite loop
+
+10) new address: 0x00400028. Output: 15
+
+11)jal
+
+--TPS 1--
+1) output 38
+
+3)
+The wrong value is being stored for $ra because it was changed to SUB. We are going to plan to restore this to the correct place.
+
+4) $a0 -> s
+5) we are going to store m -> $s4
+6)in code
