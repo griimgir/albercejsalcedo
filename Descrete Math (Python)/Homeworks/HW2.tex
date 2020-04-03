@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin= 1in]{geometry}
+\usepackage{amsmath}
+\title{Homework 2}
+\author{Alberc Ej Salcedo}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Knowledge Representations}
+
+\begin{enumerate}
+\item Let p = It is cloudy, Let q = It is raining: q $\rightarrow$ p.
+\item Let p = I like to eat apples, Let q =  I like to eat bananas: p $\wedge$ q.
+\item Let p = Behind the clouds, Let q = The sun is shining: q $\rightarrow$ p.
+\item Let p = The function is differentiable, Let q = The function is continuous: p $\rightarrow$ q.
+\item Let p = I will study for the final, Let q = I will fail the final: then $\neg$p $\rightarrow$ q.
+\end{enumerate}
+\section{Equivilance in Propositional Logic}
+
+\begin{enumerate}
+\item 
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot q$ & $p \land q$ & $p \lor  \lnot q$ & $(p \land q) \leftrightarrow  (p \lor \lnot q)$ \\
+\hline
+0 & 0 & 1 & 0 & 1 & 0\\
+0 & 1 & 0 & 0 & 0 & 1\\		%recieved help from roommate from setting up these tables
+1 & 0 & 1 & 0 & 1 & 0\\
+1 & 1 & 0 & 1 & 1 & 1\\
+\hline
+\end{tabular}
+\newline
+The statements p $\wedge$ q and p $\lor$ $\neg$q are not equivilant because all cases are not true in the final column.
+
+\item
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \lor q$ & $\lnot p \lor  \lnot q$ & $(p \lor q) \leftrightarrow  (\lnot p \lor \lnot q)$ \\
+\hline
+0 & 0 & 1 & 1 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 1 & 1 & 1\\
+1 & 0 & 0 & 1 & 1 & 1 & 1\\
+1 & 1 & 0 & 0 & 1 & 0 & 0\\
+\hline
+\end{tabular}
+\newline
+The statements p $\lor$ q and $\neg$p $\lor$ $\neg$q are not equivilant because all cases are not true in the final column.
+
+\item
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \rightarrow q$ & $\lnot q \rightarrow  \lnot p$ & $(p \rightarrow q) \leftrightarrow  (\lnot q \rightarrow \lnot p)$ \\
+\hline
+0 & 0 & 1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 1 & 1 & 1\\
+1 & 0 & 0 & 1 & 0 & 0 & 1\\
+1 & 1 & 0 & 0 & 1 & 1 & 1\\
+\hline
+\end{tabular}
+\newline
+The statements p $\rightarrow$ q and $\neg$q $\rightarrow$ $\neg$p are equivilant because all cases are true in the final column.
+\item
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot p$ & $p \rightarrow q$ & $\lnot p \lor q$ & $(p \rightarrow q) \leftrightarrow  (\lnot p \lor q)$ \\
+\hline
+0 & 0 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 0 & 1\\
+1 & 1 & 0 & 1 & 1 & 1\\
+\hline
+\end{tabular}
+\newline
+The statements p $\rightarrow$ q and $\neg$p $\lor$ q are equivilant because all cases are true in the final column.
+
+\item
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\lnot p$ & $\lnot q$ & $\lnot(p \land q)$ & $\lnot p \lor  \lnot q$ & $\lnot(p \land q) \leftrightarrow  (\lnot p \lor \lnot q)$ \\
+\hline
+0 & 0 & 1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 1 & 1 & 1\\
+1 & 0 & 0 & 1 & 1 & 1 & 1\\
+1 & 1 & 0 & 0 & 0 & 0 & 1\\
+\hline
+\end{tabular}
+\newline
+The statements $\neg$(p $\wedge$ q) and $\neg$p $\lor$ $\neg$q are equivilant because all cases are true in the final column
+\end{enumerate}
+
+\end{document}
